@@ -1,0 +1,40 @@
+<input type="checkbox" id="modal_create_room" hidden />
+<div class="modal_create_room">
+    <label for="modal_create_room" class="close__modal"><i
+            class="fas fa-times"
+        ></i></label>
+    <form action="" id="form-create-room">
+        <h2>Create room</h2>
+        <div class="form-group">
+            <input
+                type="text"
+                placeholder=" "
+                id="roomname"
+                autocomplete="off"
+                name="roomname"
+            />
+            <label for="roomname">Room name</label>
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="form-group-file">
+            <input
+                type="file"
+                id="image-room"
+                name="image"
+                hidden
+                onchange="changeImageRoom(this)"
+            />
+            <label for="image-room">
+                <span><i class="fas fa-images"></i></span>
+                Choosen Image for room</label>
+            <div class="image-room"><img id="img-room" src="" alt="" /></div>
+        </div>
+        <div class="form-group-button">
+            <button
+                type="submit"
+                class="btn-create-room-form"
+                id="btn-create-room"
+            >Create</button>
+        </div>
+    </form>
+</div>

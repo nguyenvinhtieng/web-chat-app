@@ -1,0 +1,78 @@
+<div id="home-page"></div>
+<div class="wrapper flex-center">
+    <div class="message">
+        <div class="message__header">
+            <h2> <span class="icon__header"><i class="fas fa-comment-dots"></i></span> Messaging</h2>
+            <h4 class="my__name"></h4> &nbsp;
+            <div class="drop-down flex-center">
+                <i class="fas fa-caret-down"></i>
+                <div class="drop__down__menu">
+                    <ul>
+                        <li class="item">
+                            <label for="modal-exit">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="message__container">
+            <div class="message__user">
+                <div class="message__user__header">
+                    User
+                </div>
+                <div class="message__user__content">
+                    <ul class="list-user">
+                        {{#if users}}
+                        {{#each users}}
+                        <li class="user-item" data-id="{{this._id}}">
+                            <div class="user__chat">
+                                <div class="avatar-lg-square">
+                                    <img src="/images/default-avatar.jpg" alt="">
+                                </div>
+                                <div class="user__name">
+                                    {{this.name}}
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                        {{else}}
+                        <div id="no-one-person" class="flex-center">No one else</div>
+                        {{/if}}
+                    </ul>
+                </div>
+                <div class="message__user__header">
+                    Group   &nbsp; <label for="modal_create_room" class="btn-create-room"><i class="fas fa-plus"></i></label>
+                </div>
+                <div class="message__user__content">
+                    <ul class="list-room">
+                        {{#if rooms}}
+                        {{#each rooms}}
+                        <li class="room-item" data-id="{{this._id}}">
+                            <div class="user__chat">
+                                <div class="avatar-lg-square">
+                                    <img src="/images/rooms/{{this.slug}}.jpg" alt="">
+                                </div>
+                                <div class="user__name">
+                                    {{this.name}}
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                        {{else}}
+                        <div class="no-have-any-room flex-center">There aren't any rooms </div>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+            <div class="message__chat">
+                {{> content_chat}}
+            </div>
+        </div>
+    </div>
+</div>
+
+    {{> modal_delete_chat}}
+
+    {{> modal_create_room}}

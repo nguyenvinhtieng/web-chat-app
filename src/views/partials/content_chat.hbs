@@ -1,0 +1,73 @@
+<div class="slect-user-to-chat flex-center">
+    Select user or room to chat
+</div>
+<div class="chat__with__user">
+    <div class="message__chat__header">
+        <div class="back">
+            <i class="fas fa-angle-left"></i>
+            Back
+        </div>
+        <div class="avatar-lg-square">
+            <img src="/images/default-avatar.jpg" alt="" />
+        </div>
+        <div class="user__name__chat">
+            Nguyen Van A
+        </div>
+    </div>
+    <div class="message__chat__content">
+        {{! CHAT CONTENT THERE }}
+    </div>
+    <div class="message__chat__typing">
+        <img src="/images/typing.gif" alt="" />
+    </div>
+    <div class="message__chat__footer">
+        <form action="">
+            <input
+                id="text-message"
+                type="text"
+                placeholder="Write a message..."
+            />
+            <button class="btn-send flex-center"><i
+                    class="fas fa-paper-plane"
+                ></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="chat__with__room">
+    <div class="message__chat__header">
+        <div class="back back__room">
+            <i class="fas fa-angle-left"></i>
+            Back
+        </div>
+        <div class="avatar-lg-square">
+            <img
+                class="img__room__display"
+                src="/images/default-avatar.jpg"
+                alt=""
+            />
+        </div>
+        <div class="user__name__chat room__name__display">
+            Nguyen Van A
+        </div>
+    </div>
+    <div class="message__chat__content message__chat__room">
+        {{! CHAT CONTENT THERE }}
+    </div>
+    <div class="message__chat__typing message__chat__typing__room">
+        <span class="name__user__typing">abc</span>
+        <img class="img_typing" src="/images/typing.gif" alt="" />
+    </div>
+    <div class="message__chat__footer">
+        <form action="">
+            <input
+                id="text-message-room"
+                type="text"
+                placeholder="Write a message..."
+            />
+            <button class="btn-send-room flex-center"><i
+                    class="fas fa-paper-plane"
+                ></i></button>
+        </form>
+    </div>
+</div>
