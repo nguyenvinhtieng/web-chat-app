@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000"
+const URL = "https://web-chat-app-nvt.herokuapp.com/"
 function changeBorderBox(element, status = "show") {
     let parent = element.parentNode
     let warning = parent.childNodes[5] // index warning icon
